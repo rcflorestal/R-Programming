@@ -12,12 +12,12 @@ Week 2: Programming with R
 Week 3: Loop Functions and Debugging
 Week 4: Simulation & Profiling
 
-## Instructors
-*Roger D. Peng, PhD, Associate Professor, Biostatistics
+## Instructors:
+* Roger D. Peng, PhD, Associate Professor, Biostatistics
 Bloomberg School of Public Health
 
-*Jeff Leek, PhD, Associate Professor, Biostatistics
+* Jeff Leek, PhD, Associate Professor, Biostatistics
 Bloomberg School of Public Health 
 
-*Brian Caffo, PhD, Professor, Biostatistics
+* Brian Caffo, PhD, Professor, Biostatistics
 Bloomberg School of Public Health
