@@ -104,3 +104,30 @@ unclass(x)
 # The order of the levels can be set using the levels argument to factor().
 x <- factor(c("yes", "yes", "no", "yes", "no"), levels = c("yes", "no"))
 x
+
+## Missing Values
+# Missing values are denoted by 'NA' or 'NaN' for undefined mathematical operations.
+# is.na() is used to test objects if they are NA
+# NA values have a class also, so there are integer NA, character NA, etc.
+# 
+x <- c(1, 2, NA, 10, 3)
+is.na(x)
+
+# is.nan() is used to test for NaN
+is.nan(x)
+
+x <- c(1, 2, NaN, NA, 4)
+is.nan(x)
+
+# A NaN value is also NA but the converse is not true
+is.na(x)
+
+# Data Frames
+x <- data.frame(foo = 1:4, bar = c(T, T, F, F))
+x
+
+# Show the number of rows
+nrow(x)
+
+# Show de number of columns
+ncol(x)
