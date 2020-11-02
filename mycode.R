@@ -63,3 +63,44 @@ as.logical(x)
 x <- c(0, 1, 2, 3, 4, 5, 6)
 as.complex(x)
 
+## Lists
+x <- list(1, "a", TRUE, 1 + 4i)
+x
+
+## Matrices
+m <- matrix(nrow = 2, ncol = 3)
+m
+
+dim(m)  ## Show the number of row and columns
+attributes(m)
+
+# Matrices are constructed column-wise, so entries can be thought of starting in the “upper left” corner
+# and running down the columns.
+m <- matrix(1:6, nrow = 2, ncol = 3)
+m
+
+# Matrices can be created by column-binding or row-binding with cbind() and rbind().
+x <- 1:3
+y <- 10:12
+
+cbind(x, y)
+rbind(x, y)
+
+
+## Factors
+# Factors are used to represent categorical data. Factors can be unordered or ordered.
+# Factors are treated specially by modeling functions like lm() and glm()
+# Using factors with labels is better than using integers because factors are self-describing; having
+# a variable that has values “Male” and “Female” is better than a variable that has values 1 and 2.
+# With the elements yes and no, then the base line level with be the first level that's encountered 
+# and because no comes before yes in the alphabet then no will be the base line level and yes will be the second level. 
+x <- factor(c("yes", "yes", "no", "yes", "no"))
+x
+
+table(x)
+
+unclass(x)
+
+# The order of the levels can be set using the levels argument to factor().
+x <- factor(c("yes", "yes", "no", "yes", "no"), levels = c("yes", "no"))
+x
