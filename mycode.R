@@ -28,57 +28,38 @@ x <- 1:20  ## Creates a sequence of integers from 1 to 20
 # printed in square brackets [] on the side.
 x
 
-## Week 1 Quiz
-## Question 10:
-## Suppose I have a vector x <- c(17, 14, 4, 5, 13, 12, 10) and I want to set all 
-## elements of this vector that are greater than 10 to be equal to 4. What R code 
-## achieves this? Select all that apply.
-x <- c(17, 14, 4, 5, 13, 12, 10)
-x[x > 10] <- 4
-x[x < 10] <- 4
+## Creating Vectors
+x <- c(0.5, 0.6)        ## numeric
+x <- c(TRUE, FALSE)     ## logical
+# TRUE and FALSE can be abbreviate to T and F
+x <- c(T, F)            ## logical
+x <- c("a", "b", "c")   ## character
+x <- 9:29               ## integer
+x <- c(1 + 0i, 2 + 4i)  ## complex
 
-## Question 11:
-# Load Data Frame:
-df <- read.csv('C:/Robson/home_office/r_john_hopkins/R-Programming/quiz1_data/hw1_data.csv')
+# Using the vector() function
+x <- vector("numeric", length = 10)
+x
 
-# Question 12
-# Extract the first 2 rows of the data frame
-head(df,2)  
+# Mixing Objects
+y <- c(1.7, "a")  ## character
+y <- c(TRUE, 2)   ## numeric
+y <- c("a", TRUE) ## character
 
-# Question 13
-# Read the last rows of Data Frame
-tail(df, 1)
+# Explicit Coercion
+x <- 0:6
+class(x)
 
-# Question 14
-# Extract the last 2 rows of the Data Frame
-tail(df, 2)
+as.numeric(x)
+class(x)
 
-# Question 15
-# Read until 47th row
-head(df, 47)
+as.logical(x)
+as.character(x)
 
-# Question 16
-# Select and show missing values
-summary(df)
+x <- c("a", "b", "c")
+as.numeric(x)
+as.logical(x)
 
-# Question 17
-# Mean of the Ozone column in the dataset exclude missing values 
-df_Filter <- df[which(df$Ozone!=""),]
+x <- c(0, 1, 2, 3, 4, 5, 6)
+as.complex(x)
 
-z <- mean(df_Filter$Ozone)
-
-# Question 18
-# Extract the subset of rows of the data frame where Ozone values are
-# above 31 and Temp values are above 90. 
-# What is the mean of Solar.R in this subset
-df_Oz_Temp <- df [which(df$Ozone > 31 & df$Temp > 90),]
-write.csv2(df_Oz_Temp, 'test.csv')
-summary(df_Oz_Temp)
-
-# Question 19
-# What is the mean of "Temp" when "Month" is equal to 6? 
-df_month6 <- df[which(df$Month==6),]
-mean(df_month6$Temp)
-
-# Question 20
-# What was the maximum ozone value in the month of May (i.e. Month is equal to 5)?
