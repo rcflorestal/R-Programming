@@ -158,6 +158,22 @@ m
 
 ## Reading Lines of a Text File
 #  This might take time
+#  From a compressed file
+
+#con <- gzfile("file name")
+#x <- readlines(con, 10)
+
+# From a websit
 con <- url("http://www.jhsph.edu", "r")
 x <- readLines(con)
 head(x)
+
+## Subsetting
+x <- c("a", "b", "c", "c", "d", "a")
+x[1]
+x[2]
+x[1:4]
+x[x > "a"]
+u <- x > "a"
+u
+x[u]
