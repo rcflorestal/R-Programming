@@ -191,6 +191,7 @@ x
 x[c(1,3)]
 x$baz
 
+## Subsetting - Lists
 x <- list(foo = 1:4, bar = 0.6, baz = "hello")
 name <- "foo"
 x[[name]]  ## computed index for 'foo'
@@ -202,3 +203,16 @@ x <- list(a = list(10, 12, 14), b = c(3.14, 2.81))
 x[[c(1, 3)]]
 x[[1]][[3]]
 x[[c(2, 1)]]
+
+## Subsetting - Matrices
+x<- matrix(1:6, 2,3)
+x
+x[1, 2] ## filters the object that is int he first row and second column
+x[2, 1] ## filters the element that is in the second row and first column
+x[1, ]  ## filters row 1
+
+# By default, when a single element of a matrix is retrieved, it is returned as 
+# a vector of length 1 rather than a 1 × 1 matrix. This behavior can be turned off 
+# by setting drop = FALSE.
+x[1, 2, drop = FALSE] 
+x[1, , drop = FALSE] 
