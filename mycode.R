@@ -131,3 +131,27 @@ nrow(x)
 
 # Show de number of columns
 ncol(x)
+
+
+## Names
+# R objects can also have names, which is very useful for writing readable code 
+# and self-describing
+
+x <- 1:3
+x
+# show names of objects
+names(x)
+
+# Name the objects
+names(x) <- c("foo", "bar", "norf")
+
+names(x)
+x
+
+# List and Matrices can also have names
+x <- list(a = 1, b = 2, c = 3)
+x
+
+m <- matrix(1:4, nrow = 2, ncol = 2)
+dimnames(m) <- list(c("a", "b"), c("c", "d"))
+m
