@@ -216,3 +216,9 @@ x[1, ]  ## filters row 1
 # by setting drop = FALSE.
 x[1, 2, drop = FALSE] 
 x[1, , drop = FALSE] 
+
+## Subsetting - Partial Matching
+x <- list(aardvark = 1:5)
+x$a
+x[["a"]]              ## Filters exactly the object "a"
+x[["a", exact = F]]   ## Filters object that have "a" in the name
