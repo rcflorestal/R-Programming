@@ -222,3 +222,21 @@ x <- list(aardvark = 1:5)
 x$a
 x[["a"]]              ## Filters exactly the object "a"
 x[["a", exact = F]]   ## Filters object that have "a" in the name
+
+
+## Removing NA Values
+x <- c(1, 2, NA, 4, NA, 5)
+bad <- is.na(x)
+bad
+x[!bad]
+
+x <- c(1, 2, NA, 4, NA, 5)
+y <- c("a", "b", NA, "d", NA, "f")
+good <- complete.cases(x, y)  ## vector logical
+good
+x[good]
+y[good]
+
+airquality[1:6, ]
+good <- complete.cases(airquality)
+airquality[good, ][1:6]
