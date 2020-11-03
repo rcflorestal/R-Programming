@@ -240,3 +240,17 @@ y[good]
 airquality[1:6, ]
 good <- complete.cases(airquality)
 airquality[good, ][1:6]
+
+## Vectorized Operations
+x <- 1:4; y <- 6:9
+x; y
+x + y
+x > 2 
+y == 8
+x * y
+x / y
+
+x <- matrix(1:4, 2, 2); y <- matrix(rep(10, 4), 2, 2)
+x * y
+x / y
+x %*% y  ## true matrix multiplication
