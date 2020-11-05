@@ -33,10 +33,41 @@ columnMean <- function(y){
         nc <- ncol(y)
         means <- numeric(nc)
         for(i in 1:nc){
-                means[i] <- mean(y[, i], na.rm = T)
+                means[i] <- mean(y[, i], na.rm = T, col.names = T)
         }
         means
 }
 
 # Call the columnMean Function:
 columnMean(airquality)
+
+
+# Lexical Scoping
+make.power <- function(n){
+        pow <- function(x){
+                x^n
+        }
+        pow
+}
+
+cube <- make.power(3)
+cube(3)
+
+square <- make.power(2)
+square(3)
+
+# Exploring a Function Closure
+ls(environment(cube))
+get("n", environment(square))
+
+# Lexical vs. Dynamic Scoping
+y <- 10
+f <- function(x){
+        y <- 2          ## Here y is equal 2 (dynamic scoping)
+        y^2 + g(x)
+}
+
+g <- function(x){
+        x*y             ## Here y is equal 10 (lexical scoping)
+}
+f(3)
