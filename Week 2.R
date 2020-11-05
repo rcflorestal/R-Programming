@@ -79,7 +79,9 @@ tail(andy_david)
 day_25 <- andy_david[which(andy_david$Day == 25), ]
 day_25
 
+#---------------------------Control Structures---------------------------------#
 # To understand what's happening in a loop:
+# For loop
 for (i in 1:5) {
   print(i)
 }
@@ -128,6 +130,7 @@ weightMedian("diet_data", 4)
 
 # Creates an output object of an appropriate size and then fill it up.
 # First way
+files_full <- list.files("diet_data", full.names = T)
 summary(files_full)
 tmp <- vector(mode = "list", length = length(files_full))
 summary(tmp)
@@ -146,3 +149,42 @@ head(tmp[[5]][,"Day"])
 # We can use a function called `do.call()` to combine `tmp` into a single data frame. `do.call`
 output <- do.call(rbind, tmp)
 str(output)
+
+# While Loop
+count <- 0
+while (count < 10) {
+  print(count)
+  count <- count + 1
+}
+
+z <- 5
+while(z >= 3 && z <= 10) {
+  print(z)
+  coin <- rbinom(1, 1, 0.5)
+  if(coin == 1) { ## random walk
+    z <- z + 1
+  } else {
+    z <- z - 1
+  }
+}
+
+# Repeat, Break and Next Loops
+x0 <- 1
+tol <- 1e-8
+repeat {
+  x1 <- computeEstimate()
+  if(abs(x1 - x0) < tol) {
+    break
+  } else {
+    x0 <- x1
+  }
+}
+
+for (i in 1:100) {
+  if(i <= 20) {
+    ## Skip the first 20 iterations
+    next
+  }
+  ## Do something here
+}
+
