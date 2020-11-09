@@ -64,3 +64,4 @@ cnames <- c("patient", "age", "weight", "bp", "rating", "test")
 # Now, use the colnames() function to set the `colnames` attribute for our data 
 # frame
 colnames(my_data) <- cnames
+my_data
