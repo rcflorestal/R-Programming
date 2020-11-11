@@ -1,12 +1,14 @@
 #----------------------Matrices and Data Frames--------------------------------#
-#
-#
-# In this lesson, we'll cover matrices and data frames. Both represent 
-# 'rectangular' data types, meaning that they are used to store tabular data,
-# with rows and columns.
-#
-# Let's create a vector containing the numbers 1 through 20 using the `:` 
-# operator. Store the result in a variable called my_vector.
+#                                                                              #
+#                                                                              #
+# In this lesson, we'll cover matrices and data frames. Both represent         #
+# 'rectangular' data types, meaning that they are used to store tabular data,  #
+# with rows and columns.                                                       #
+#                                                                              #
+# Let's create a vector containing the numbers 1 through 20 using the `:`      #  
+# operator. Store the result in a variable called my_vector.                   #
+#------------------------------------------------------------------------------#
+
 my_vector <- 1:20
 my_vector
 
