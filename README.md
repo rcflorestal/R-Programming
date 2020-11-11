@@ -1,6 +1,6 @@
 # R-Programming
 
-This is a course that is part of Data Science Specialiation at John Hopkins University
+This is a course that is part of Data Science Specialiation at Johns Hopkins University
 and offered by [COUSERA](https://www.coursera.org) Platform.
 
 ## About this Course
