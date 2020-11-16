@@ -20,7 +20,7 @@ corr <- function(directory, threshold = 0){
                 df <- read.csv(lf[i])
                 df2 <- complete.cases(df)
                 df <- df[df2, ]
-                ## Calculates correlations between sulfate and bitrate
+                ## Calculates correlations between sulfate and nitrate
                 if(nrow(df) > threshold){
                         corre <- cor(df[["sulfate"]], df[["nitrate"]])
                         res <- append(res, corre)
@@ -28,7 +28,7 @@ corr <- function(directory, threshold = 0){
                 }else{
                         return(c(0))
                 }
-
+                
         }
         res
 }
@@ -61,3 +61,4 @@ n <- length(cr)
 cr <- corr("specdata", 1000)                
 cr <- sort(cr)
 print(c(n, round(cr, 4)))
+
